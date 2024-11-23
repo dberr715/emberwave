@@ -1,14 +1,15 @@
 "use client";
+
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Services", href: "/services", current: false },
-  { name: "Clients", href: "/clients", current: false },
-  { name: "About Us", href: "/about", current: false },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Clients", href: "/clients" },
+  { name: "About Us", href: "/about" },
 ];
 
 function classNames(...classes: string[]) {
@@ -16,15 +17,17 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const pathname = usePathname(); // Get the current route
+
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-dark font-base">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               {/* Mobile menu button */}
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-sidebarBg hover:text-highlight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-highlight">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -35,29 +38,34 @@ export default function Navbar() {
               </div>
 
               {/* Logo and Navigation Links */}
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex shrink-0 items-center">
+              <div className="flex flex-1 items-center justify-between sm:items-center sm:justify-start">
+                {/* Logo */}
+                <div className="flex items-center">
                   <Image
                     src="/images/singlenobg.png"
                     alt="Logo"
                     width={35}
                     height={35}
-                    className="h-auto"
+                    className="h-auto w-auto"
                   />
                 </div>
+
+                {/* Navigation Links */}
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex items-center space-x-8">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          pathname === item.href
+                            ? "text-highlight" // Active link color
+                            : "text-body hover:text-highlight", // Default and hover color
+                          "text-xl font-semibold uppercase"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={
+                          pathname === item.href ? "page" : undefined
+                        }
                       >
                         {item.name}
                       </a>
@@ -77,12 +85,12 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                    pathname === item.href
+                      ? "text-highlight" // Active link color
+                      : "text-body hover:text-highlight", // Default and hover color
+                    "block text-base font-medium uppercase"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={pathname === item.href ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
