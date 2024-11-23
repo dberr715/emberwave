@@ -1,7 +1,8 @@
 "use client";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Fragment } from "react";
+
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -36,10 +37,12 @@ export default function Navbar() {
               {/* Logo and Navigation Links */}
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
+                  <Image
                     src="/images/singlenobg.png"
-                    alt="Your Company"
+                    alt="Logo"
+                    width={35}
+                    height={35}
+                    className="h-auto"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
