@@ -16,13 +16,13 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative w-full h-full">
         <Navbar />
-        <video
+        {/* <video
           id="background-video"
           src="/compressed-embersfire.mp4"
           autoPlay
           loop
           muted
-        ></video>
+        ></video> */}
         <main className="relative z-10">{children}</main>
       </body>
     </html>
