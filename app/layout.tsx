@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Header from "@/components/Header";
+
 
 export const metadata = {
   title: "My Website",
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <Header />
+        
         <main className="container mx-auto">{children}</main>
       </body>
     </html>
