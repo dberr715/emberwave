@@ -1,7 +1,8 @@
 export default function Home() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
+      {/* Video Background Video by Rostislav Uzunov:
+      https://www.pexels.com/video/animated-abstract-burning-effect-5091624/ */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src="/compressed-waterfire.mp4"
@@ -10,10 +11,8 @@ export default function Home() {
         muted
         playsInline
       ></video>
-
       {/* Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-dark to-dark/10 z-5"></div>
-
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-6">
         {/* Main Heading */}

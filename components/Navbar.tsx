@@ -37,7 +37,7 @@ export default function Navbar() {
                   height={35}
                   className="h-auto w-auto"
                 />
-                <span className="hidden sm:inline text-white/20 text-sm tracking-widest uppercase font-bold">
+                <span className="text-white/20 text-sm tracking-widest uppercase font-bold">
                   EmberWave
                 </span>
               </div>
