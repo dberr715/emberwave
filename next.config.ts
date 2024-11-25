@@ -1,7 +1,8 @@
+import withVideos from "next-videos";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* other config options here */
 };
 
-export default nextConfig;
+export default withVideos(nextConfig);
