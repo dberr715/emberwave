@@ -1,10 +1,10 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-
 export const metadata = {
-  title: "My Website",
-  description: "A sample Next.js website",
+  title: "EmberWave",
+  description:
+    "Providing AI Integration, Web Development, & Consultancy headquartered in Greenville, SC.",
 };
 
 export default function RootLayout({
@@ -14,10 +14,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="relative w-full h-full">
         <Navbar />
-        
-        <main className="container mx-auto">{children}</main>
+        <video
+          id="background-video"
+          src="/compressed-embersfire.mp4"
+          autoPlay
+          loop
+          muted
+        ></video>
+        <main className="relative z-10">{children}</main>
       </body>
     </html>
   );

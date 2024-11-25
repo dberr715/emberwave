@@ -20,14 +20,17 @@ export default function Navbar() {
   const pathname = usePathname(); // Get the current route
 
   return (
-    <Disclosure as="nav" className="bg-dark font-base">
+    <Disclosure
+      as="nav"
+      className="bg-black/40 backdrop-blur-sm fixed top-0 left-0 w-full z-30"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               {/* Mobile menu button */}
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-sidebarBg hover:text-highlight focus:outline-none focus:ring-2 focus:ring-inset focus:ring-highlight">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-highlight">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -59,8 +62,8 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           pathname === item.href
-                            ? "text-highlight" // Active link color
-                            : "text-body hover:text-highlight", // Default and hover color
+                            ? "text-orange-400" // Active link color
+                            : "text-white hover:text-orange-400", // Default and hover color
                           "text-xl font-semibold uppercase"
                         )}
                         aria-current={
@@ -86,8 +89,8 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     pathname === item.href
-                      ? "text-highlight" // Active link color
-                      : "text-body hover:text-highlight", // Default and hover color
+                      ? "text-orange-400" // Active link color
+                      : "text-white hover:text-orange-400", // Default and hover color
                     "block text-base font-medium uppercase"
                   )}
                   aria-current={pathname === item.href ? "page" : undefined}
