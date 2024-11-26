@@ -39,7 +39,10 @@ export default function Home() {
       {/* Page Content */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <div className="flex flex-col items-center justify-center text-center h-screen px-6">
+        <div
+          id="hero"
+          className="flex flex-col items-center justify-center text-center h-screen px-6"
+        >
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
             Dream. Design. Develop.
           </h1>
@@ -70,7 +73,7 @@ export default function Home() {
         {/* Vision and Mission Section */}
         <div
           id="vision-mission"
-          className="relative bg-transparent py-16 px-6 sm:px-12 lg:px-20"
+          className="flex flex-col justify-center items-center h-screen bg-transparent py-16 px-6 sm:px-12 lg:px-20"
         >
           <VisionMission />
         </div>
