@@ -25,6 +25,9 @@ const config: Config = {
         base: ["Kanit", "sans-serif"],
         heading: ["Bai Jamjuree", "sans-serif"],
       },
+      boxShadow: {
+        orangeGlow: "0 15px 50px rgba(249, 165, 63, 0.9)", // Custom glowing orange shadow
+      },
     },
   },
   plugins: [require("daisyui")], // Added daisyUI plugin
