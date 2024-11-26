@@ -1,6 +1,26 @@
+"use client";
+
+import { useEffect } from "react";
+import Link from "next/link";
 import VisionMission from "@/components/VisionMission";
 
 export default function Home() {
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href")?.substring(1);
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
   return (
     <div className="relative w-full h-full">
       {/* Fixed Video Background */}
@@ -28,14 +48,18 @@ export default function Home() {
             creative design.
           </p>
           <div className="mt-8 flex space-x-4">
-            <a
-              href="#vision-mission"
+            {/* Redirects to Services Page */}
+            <Link
+              href="/services"
               className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
             >
               Get Started
-            </a>
+            </Link>
+
+            {/* Smooth Scroll to Vision/Mission Section */}
             <a
               href="#vision-mission"
+              onClick={handleSmoothScroll}
               className="text-highlight hover:text-highlight-dark font-medium flex items-center transition"
             >
               Learn More →

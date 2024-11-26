@@ -27,7 +27,30 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")], // Added daisyUI plugin
+  daisyui: {
+    themes: [
+      {
+        emberwave: {
+          primary: "#f9a53f",
+          "primary-focus": "#c77826",
+          "primary-content": "#ffffff",
+          secondary: "#292929",
+          "secondary-focus": "#1e1e1e",
+          "secondary-content": "#ffffff",
+          accent: "#057786",
+          "accent-focus": "#045f6a",
+          "accent-content": "#ffffff",
+          neutral: "#595959",
+          "neutral-focus": "#404040",
+          "neutral-content": "#ffffff",
+          "base-100": "#292929",
+          "base-content": "#ffffff",
+        },
+      },
+    ],
+    darkTheme: "emberwave", // Sets "emberwave" as the default dark theme
+  },
 };
 
 export default config;
