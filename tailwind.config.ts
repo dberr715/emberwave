@@ -13,46 +13,46 @@ const config: Config = {
         "highlight-dark": "#c77826", // Darker orange
         "highlight-light": "#fcd5a5", // Light orange
         dark: "#292929", // Dark background
-        body: "#b6cbce",
-        heading: "#eef3db",
-        base: "#057786",
-        base2: "#022a30",
-        brand: "#ffff00",
-        brand2: "#46540f",
-        sidebarBg: "#595959",
+        body: "#b6cbce", // General body color
+        heading: "#eef3db", // Heading text color
+        base: "#057786", // Base accent color
+        base2: "#022a30", // Secondary base accent
+        brand: "#ffff00", // Bright brand color
+        brand2: "#46540f", // Muted brand color
+        sidebarBg: "#595959", // Sidebar background
       },
       fontFamily: {
-        base: ["Kanit", "sans-serif"],
-        heading: ["Bai Jamjuree", "sans-serif"],
+        base: ["Kanit", "sans-serif"], // Base font
+        heading: ["Bai Jamjuree", "sans-serif"], // Heading font
       },
       boxShadow: {
         orangeGlow: "0 15px 50px rgba(249, 165, 63, 0.9)", // Custom glowing orange shadow
       },
     },
   },
-  plugins: [require("daisyui")], // Added daisyUI plugin
+  plugins: [require("daisyui")],
   daisyui: {
     themes: [
       {
         emberwave: {
-          primary: "#f9a53f",
-          "primary-focus": "#c77826",
-          "primary-content": "#ffffff",
-          secondary: "#292929",
-          "secondary-focus": "#1e1e1e",
-          "secondary-content": "#ffffff",
-          accent: "#057786",
-          "accent-focus": "#045f6a",
-          "accent-content": "#ffffff",
-          neutral: "#595959",
-          "neutral-focus": "#404040",
-          "neutral-content": "#ffffff",
-          "base-100": "#292929",
-          "base-content": "#ffffff",
+          primary: "#f9a53f", // Primary orange
+          "primary-focus": "#c77826", // Darker orange
+          "primary-content": "#ffffff", // Text on primary background
+          secondary: "#292929", // Dark background
+          "secondary-focus": "#1e1e1e", // Darker secondary
+          "secondary-content": "#ffffff", // Text on secondary background
+          accent: "#057786", // Blue-green accent
+          "accent-focus": "#045f6a", // Darker accent
+          "accent-content": "#ffffff", // Text on accent
+          neutral: "#595959", // Neutral gray
+          "neutral-focus": "#404040", // Darker neutral
+          "neutral-content": "#ffffff", // Text on neutral
+          "base-100": "#292929", // Base background
+          "base-content": "#ffffff", // Text on base background
         },
       },
     ],
-    darkTheme: "emberwave", // Sets "emberwave" as the default dark theme
+    darkTheme: "emberwave", // Default dark theme
   },
 };
 
