@@ -1,3 +1,7 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   FaLaptopCode,
   FaMobileAlt,
@@ -5,9 +9,13 @@ import {
   FaCloud,
   FaChartBar,
   FaChalkboardTeacher,
-} from "react-icons/fa"; // Importing Font Awesome Icons
+} from "react-icons/fa";
 
 const Services = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: "ease-out", once: true });
+  }, []);
+
   const services = [
     {
       title: "Web Development/Design",
@@ -49,7 +57,10 @@ const Services = () => {
 
   return (
     <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16">
-      <h1 className="text-5xl font-bold text-center text-highlight mb-12">
+      <h1
+        className="text-5xl font-bold text-center text-highlight mb-12"
+        data-aos="fade-up"
+      >
         Our Services
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,6 +68,8 @@ const Services = () => {
           <div
             key={index}
             className="card glass bg-dark/70 shadow-lg hover:shadow-xl transition-all"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
           >
             <figure className="flex items-center justify-center p-6">
               {service.icon}

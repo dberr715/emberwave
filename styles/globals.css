@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import "aos/dist/aos.css";
+
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   margin: 0;
