@@ -12,8 +12,11 @@ export default function Home() {
     if (targetId) {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
+        const navbarHeight = 80; // Adjust to match the navbar height
+        const targetPosition = targetElement.offsetTop - navbarHeight;
+
         window.scrollTo({
-          top: targetElement.offsetTop,
+          top: targetPosition,
           behavior: "smooth",
         });
       }
@@ -40,7 +43,7 @@ export default function Home() {
         {/* Hero Section */}
         <div
           id="hero"
-          className="flex flex-col items-center justify-center text-center h-screen px-6"
+          className="flex flex-col items-center justify-center text-center min-h-screen px-6"
         >
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
             Dream. Design. Develop.
@@ -72,7 +75,7 @@ export default function Home() {
         {/* Vision and Mission Section */}
         <div
           id="vision-mission"
-          className="flex flex-col justify-center items-center h-screen bg-transparent py-16 px-6 sm:px-12 lg:px-20"
+          className="flex flex-col justify-center items-center min-h-screen bg-transparent py-16 px-6 sm:px-12 lg:px-20"
         >
           <VisionMission />
         </div>
