@@ -50,7 +50,7 @@ const Services = () => {
     {
       title: "Staff Training",
       description:
-        "With my education background, I provide training for staff on technical products, including those I create, making complex concepts easy to understand.",
+        "With a Masters in Education, I provide training for staff on technical products, including those I create, making complex concepts easy to understand.",
       icon: <FaChalkboardTeacher size={48} className="text-highlight" />,
     },
   ];
