@@ -19,10 +19,15 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   const pathname = usePathname(); // Get the current route
 
+  const isHomePage = pathname === "/";
+
   return (
     <Disclosure
       as="nav"
-      className="bg-black/20 backdrop-blur-sm fixed top-0 left-0 w-full z-30"
+      className={classNames(
+        isHomePage ? "bg-black/10 backdrop-blur-sm" : "bg-black/80",
+        "fixed top-0 left-0 w-full z-30"
+      )}
     >
       {({ open }) => (
         <>
@@ -37,7 +42,7 @@ export default function Navbar() {
                   height={35}
                   className="h-auto w-auto"
                 />
-                <span className="text-white/20 text-sm tracking-widest uppercase font-bold">
+                <span className="text-white/70 text-sm tracking-widest uppercase font-bold">
                   EmberWave
                 </span>
               </div>
@@ -78,7 +83,12 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu */}
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel
+            className={classNames(
+              isHomePage ? "bg-black/60" : "bg-black/90",
+              "sm:hidden text-white"
+            )}
+          >
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -88,7 +98,7 @@ export default function Navbar() {
                   className={classNames(
                     pathname === item.href
                       ? "text-orange-400" // Active link color
-                      : "text-white/20 hover:text-orange-400", // Default and hover color
+                      : "text-white/70 hover:text-orange-400", // Default and hover color
                     "block text-base font-bold tracking-wider uppercase"
                   )}
                   aria-current={pathname === item.href ? "page" : undefined}
