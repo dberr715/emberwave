@@ -1,6 +1,6 @@
 "use client";
 
-import { FaArrowRight } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
 
 const Clients = () => {
@@ -22,15 +22,44 @@ const Clients = () => {
     },
   ];
 
+  const projects = [
+    {
+      title: "Project A",
+      description: "Description of Project A.",
+      buttonText: "Learn More",
+      image:
+        "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
+    },
+    {
+      title: "Project B",
+      description: "Description of Project B.",
+      buttonText: "Learn More",
+      image:
+        "https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp",
+    },
+    {
+      title: "Project C",
+      description: "Description of Project C.",
+      buttonText: "Learn More",
+      image:
+        "https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp",
+    },
+    {
+      title: "Project D",
+      description: "Description of Project D.",
+      buttonText: "Learn More",
+      image:
+        "https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp",
+    },
+  ];
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    projectsSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 space-y-16">
-      {/* Header Section */}
-      <div className="text-center space-y-4">
-        <h1 className="text-5xl font-bold text-highlight">
-          Hear From Our Satisfied Clients
-        </h1>
-      </div>
-
       {/* Main Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Image Section */}
@@ -42,12 +71,31 @@ const Clients = () => {
             objectFit="cover"
             className="rounded-lg shadow-lg"
           />
-          {/* Overlay Text */}
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-start bg-gradient-to-t from-black/60 to-transparent py-4 px-6 rounded-b-lg">
-            <p className="text-white text-lg lg:text-4xl font-large ">
-              Real stories of success and innovation from the businesses and
-              people we've worked with.
-            </p>
+          {/* Overlay Section */}
+          <div className="absolute inset-0 bg-black/40 rounded-lg">
+            {/* Overlay Text at the Top */}
+            <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-4 px-6 rounded-t-lg">
+              <p className="text-white text-lg lg:text-4xl font-large text-left">
+                Real stories of success and innovation from the businesses and
+                people we've worked with.
+              </p>
+            </div>
+
+            {/* Become a Satisfied Customer Section */}
+            <div className="absolute bottom-0 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-4 px-6 rounded-b-lg">
+              <h3 className="text-white text-lg lg:text-2xl font-bold text-right">
+                Become a satisfied customer
+              </h3>
+              <button className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition">
+                Join Now
+              </button>
+              <a
+                href="#"
+                className="text-white text-sm underline hover:text-highlight-dark mt-2 text-right"
+              >
+                Write a review
+              </a>
+            </div>
           </div>
         </div>
 
@@ -74,31 +122,45 @@ const Clients = () => {
         </div>
       </div>
 
-      {/* Sticky Row */}
-      <div className="fixed bottom-0 left-0 right-0 bg-dark/90 py-4 px-6 flex justify-between items-center space-x-4">
-        {/* Left Section */}
-        <div className="flex flex-col items-start space-y-2">
-          <h3 className="text-highlight text-lg font-semibold">
-            Be one of these satisfied customers
-          </h3>
-          <button className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition">
-            Join Now
-          </button>
-          <a
-            href="#"
-            className="text-highlight text-sm underline hover:text-highlight-dark"
-          >
-            Write a review
-          </a>
-        </div>
+      {/* Down Arrow */}
+      <div className="flex justify-center ">
+        <button
+          className="text-highlight animate-bounce"
+          onClick={scrollToProjects}
+        >
+          <FaChevronDown className="text-4xl" />
+        </button>
+      </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col items-center space-y-2">
-          <p className="text-gray-300 text-sm">Current clients click here</p>
-          <button className="bg-gray-800 text-highlight font-semibold px-6 py-3 rounded-lg shadow hover:bg-dark/70 transition">
-            Check Project Tracking Status{" "}
-            <FaArrowRight className="inline ml-2" />
-          </button>
+      {/* Completed Projects Section */}
+      <div id="projects">
+        <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
+          Completed Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="card lg:card-side bg-base-100 shadow-xl"
+            >
+              <figure>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover w-full h-56 lg:h-auto"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{project.title}</h2>
+                <p>{project.description}</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">
+                    {project.buttonText}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
