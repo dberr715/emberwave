@@ -1,85 +1,123 @@
-"use client";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import {
   FaLaptopCode,
-  FaMobileAlt,
   FaBrain,
   FaCloud,
   FaChartBar,
   FaChalkboardTeacher,
+  FaPencilRuler,
 } from "react-icons/fa";
 
 const Services = () => {
-  useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-out", once: true });
-  }, []);
+  const metrics = [
+    { value: "450+", label: "Projects Done" },
+    { value: "1.5k+", label: "Active Users" },
+    { value: "850+", label: "Lives Impacted" },
+    { value: "10k+", label: "Satisfied Clients" },
+  ];
 
   const services = [
     {
-      title: "Web Development/Design",
+      title: "Web Development",
       description:
-        "Specialization in creating visually striking, user-friendly websites to elevate your online presence.",
+        "Building modern, responsive, and user-friendly websites to enhance your online presence and engagement.",
       icon: <FaLaptopCode size={48} className="text-highlight" />,
     },
     {
-      title: "Application Development",
+      title: "Web Design",
       description:
-        "Development of applications to make your business or idea accessible on mobile platforms.",
-      icon: <FaMobileAlt size={48} className="text-highlight" />,
+        "Creating visually stunning and intuitive designs using tools like Figma to bring your vision to life.",
+      icon: <FaPencilRuler size={48} className="text-highlight" />,
     },
     {
       title: "AI Integration",
       description:
-        "Generation of tailor-made solutions for artificial intelligence chat automation to enhance your business processes.",
+        "Leveraging artificial intelligence to streamline workflows and improve business efficiency.",
       icon: <FaBrain size={48} className="text-highlight" />,
     },
     {
       title: "Cloud/DevOps Consulting",
       description:
-        "Offering expertise in cloud services and DevOps practices to streamline deployment, improve scalability, and automate workflows.",
+        "Optimizing your infrastructure and deployment processes with tailored cloud and DevOps strategies.",
       icon: <FaCloud size={48} className="text-highlight" />,
     },
     {
-      title: "Power BI Creation",
+      title: "Dashboard Creation",
       description:
-        "Specializing in the creation of Power BI dashboards and reports to help you visualize data, gain insights, and make data-driven decisions effectively.",
+        "Designing and implementing data-driven dashboards to provide actionable insights and support decision-making.",
       icon: <FaChartBar size={48} className="text-highlight" />,
     },
     {
-      title: "Staff Training",
+      title: "Technical Training",
       description:
-        "With a Masters in Education, I provide training for staff on technical products, including those I create, making complex concepts easy to understand.",
+        "Providing expert-led training sessions to equip your team with the skills they need to succeed in a tech-driven world.",
       icon: <FaChalkboardTeacher size={48} className="text-highlight" />,
     },
   ];
 
   return (
-    <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16">
-      <h1
-        className="text-5xl font-bold text-center text-highlight mb-12"
-        data-aos="fade-up"
-      >
-        Our Services
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="card glass bg-dark/70 shadow-lg hover:shadow-xl transition-all"
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            <figure className="flex items-center justify-center p-6">
-              {service.icon}
-            </figure>
-            <div className="card-body text-white">
-              <h2 className="card-title text-highlight">{service.title}</h2>
-              <p className="text-gray-300">{service.description}</p>
-            </div>
+    <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 space-y-16">
+      {/* Hero Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+        {/* Text Content */}
+        <div className="space-y-6">
+          <h1 className="text-5xl font-bold text-highlight">
+            Empowering Your Vision
+          </h1>
+          <p className="text-lg text-gray-300">
+            We bring your business ideas to life with innovative solutions that
+            connect, engage, and inspire. From strategy to execution, we deliver
+            exceptional results tailored to your unique goals.
+          </p>
+          <div className="flex space-x-4">
+            <button className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition">
+              Let’s Talk!
+            </button>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div>
+          <img
+            src="/images/multiscreens.jpg"
+            alt="Multiscreens"
+            className="rounded-lg shadow-lg h-96 object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Metrics Section */}
+      {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {metrics.map((metric, index) => (
+          <div key={index} className="space-y-2">
+            <h3 className="text-4xl font-bold text-highlight">
+              {metric.value}
+            </h3>
+            <p className="text-gray-300">{metric.label}</p>
           </div>
         ))}
+      </div> */}
+
+      {/* Services Section */}
+      <div>
+        <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="card glass shadow-lg p-6 flex flex-col justify-between"
+            >
+              <div className="flex items-center mb-4 space-x-4">
+                {service.icon}
+                <h2 className="card-title text-highlight">{service.title}</h2>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
