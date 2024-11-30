@@ -1,6 +1,6 @@
 "use client";
 
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaStar } from "react-icons/fa";
 import Image from "next/image";
 
 const Clients = () => {
@@ -64,7 +64,7 @@ const Clients = () => {
         Clients
       </h2>
       {/* Horizontal Bar Section */}
-      <div className="bg-dark/70 rounded-lg py-6">
+      <div className="bg-dark/50 rounded-lg py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           {/* Check Project Status */}
           <div className="text-center">
@@ -83,11 +83,6 @@ const Clients = () => {
           </div>
         </div>
       </div>
-
-      {/* Title for Client Reviews */}
-      {/* <div className="text-center py-4">
-        <h2 className="text-4xl font-bold text-highlight">Client Reviews</h2>
-      </div> */}
 
       {/* Existing Content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -135,6 +130,13 @@ const Clients = () => {
                   {testimonial.author}
                 </h3>
                 <p className="text-sm text-gray-400">{testimonial.position}</p>
+                <div className="flex mt-2">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, starIndex) => (
+                      <FaStar key={starIndex} className="text-highlight mr-1" />
+                    ))}
+                </div>
               </div>
             </div>
           ))}
