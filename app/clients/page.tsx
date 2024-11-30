@@ -154,21 +154,22 @@ const Clients = () => {
       </div>
 
       {/* Example Projects Section */}
+      {/* Example Projects Section */}
       <div id="projects" className="pb-8">
         <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
           Example Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="card bg-base-100 shadow-xl flex flex-row items-stretch"
+              className="card bg-base-100 shadow-xl flex flex-col lg:flex-row items-stretch"
             >
-              <figure className="w-2/5">
-                <img
+              <figure className="lg:w-2/5 w-full">
+              <Image
                   src={project.image}
                   alt={project.title}
-                  className="object-contain w-full h-full"
+                  className="w-full h-auto lg:h-full object-cover"
                 />
               </figure>
               <div className="card-body flex-1 p-6">
