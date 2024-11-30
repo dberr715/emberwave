@@ -59,7 +59,7 @@ const Clients = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 space-y-16">
+    <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 space-y-16 pt-36">
       {/* Main Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Image Section */}
@@ -133,34 +133,144 @@ const Clients = () => {
       </div>
 
       {/* Completed Projects Section */}
-      <div id="projects">
+      <div id="projects" className="py-16">
         <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
           Completed Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="card lg:card-side bg-base-100 shadow-xl"
-            >
-              <figure>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="object-cover w-full h-56 lg:h-auto"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{project.title}</h2>
-                <p>{project.description}</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">
-                    {project.buttonText}
-                  </button>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* The Children's Center of Asheboro */}
+          <div className="card bg-base-100 shadow-xl flex flex-row items-stretch">
+            <figure className="w-2/5">
+              <img
+                src="images/Tree.jpg"
+                alt="The Children's Center of Asheboro"
+                className="object-cover w-full h-full"
+              />
+            </figure>
+            <div className="card-body flex-1 p-6">
+              <h2 className="card-title text-2xl font-semibold">
+                The Children's Center of Asheboro
+              </h2>
+              <p className="text-white-600 text-md">
+                The Children's Center of Asheboro never previously had an online
+                presence. They wanted to establish a website to increase
+                community awareness and ensure that new families moving into the
+                area would easily find and learn about their services. Built
+                using WordPress to provide a user-friendly, scalable solution
+                that allowed them to effectively showcase their offerings and
+                engage with the local community.
+              </p>
+              <div className="card-actions justify-end mt-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Website
+                </a>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Quad AI Lead Generator */}
+          <div className="card bg-base-100 shadow-xl flex flex-row items-stretch">
+            <figure className="w-2/5">
+              <img
+                src="images/quadspaceai.png"
+                alt="Quad AI Lead Generator"
+                className="object-cover w-full h-full"
+              />
+            </figure>
+            <div className="card-body flex-1 p-6">
+              <h2 className="card-title text-2xl font-semibold">
+                Quad AI Lead Generator
+              </h2>
+              <p className="text-white-600 text-md">
+                Built for a supply chain logistics company, Quad AI is an expert
+                of warehouse logistics for the customer to use. Quad uses AI,
+                uploaded knowledge files, and directives to discover the user's
+                warehouse issues and offer potential solutions. On the business
+                side, administrators have access to chat data and user emails
+                for potential warm lead generation.
+              </p>
+              <div className="card-actions justify-end mt-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* FootyMatch */}
+          <div className="card bg-base-100 shadow-xl flex flex-row items-stretch">
+            <figure className="w-2/5">
+              <img
+                src="images/footymatch.jpeg"
+                alt="FootyMatch"
+                className="object-cover w-full h-full"
+              />
+            </figure>
+            <div className="card-body flex-1 p-6">
+              <h2 className="card-title text-2xl font-semibold">FootyMatch</h2>
+              <p className="text-white-600 text-md">
+                Leveraging artificial intelligence, FootyMatch aligns users'
+                preferred football, basketball, baseball, and other sports teams
+                with a corresponding soccer team, drawing parallels in terms of
+                historical performance, playing style, and various other
+                criteria. This enables users to seamlessly immerse themselves in
+                the realm of soccer.
+              </p>
+              <div className="card-actions justify-end mt-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Video Tour
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Custom AI GPTs */}
+          <div className="card bg-base-100 shadow-xl flex flex-row items-stretch">
+            <figure className="w-2/5">
+              <img
+                src="images/pathfinder.png"
+                alt="Custom AI GPTs"
+                className="object-cover w-full h-full"
+              />
+            </figure>
+            <div className="card-body flex-1 p-6">
+              <h2 className="card-title text-2xl font-semibold">
+                Custom AI GPTs
+              </h2>
+              <p className="text-white-600 text-md">
+                Crafted numerous custom GPTs tailored to the needs of local
+                business owners, with the goal of expanding their customer reach
+                and enhancing user interactions. Examples include BizFinder,
+                SalesPathFinder, and Sortation, all of which can be found on the
+                GPT store or Chipp.ai marketplace.
+              </p>
+              <div className="card-actions justify-end mt-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Website
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
