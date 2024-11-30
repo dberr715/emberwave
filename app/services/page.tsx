@@ -8,13 +8,6 @@ import {
 } from "react-icons/fa";
 
 const Services = () => {
-  const metrics = [
-    { value: "450+", label: "Projects Done" },
-    { value: "1.5k+", label: "Active Users" },
-    { value: "850+", label: "Lives Impacted" },
-    { value: "10k+", label: "Satisfied Clients" },
-  ];
-
   const services = [
     {
       title: "Web Development",
