@@ -37,29 +37,33 @@ const Clients = () => {
       title: "The Children's Center of Asheboro",
       description:
         "The Children's Center of Asheboro lacked an online presence and wanted a website to boost community awareness and help new families easily find and learn about their services. The site was built to be user-friendly, scalable, and effective in showcasing their offerings and engaging with the local community.",
-      buttonText: "Website",
+      buttonText: "Visit Website",
       image: "/images/Tree.jpg",
+      link: "https://thechildrenscenterofasheboro.com/",
     },
     {
       title: "Quad AI Lead Generator",
       description:
         "Quad AI, built for a supply chain logistics company, uses AI and knowledge files to identify warehouse issues and suggest solutions. Administrators can access chat data and user emails for lead generation.",
-      buttonText: "Website",
+      buttonText: "Visit Website",
       image: "/images/quadspaceai.png",
+      link: "https://quadspace.us/",
     },
     {
       title: "FootyMatch",
       description:
         "Leveraging artificial intelligence, FootyMatch aligns users' preferred football, basketball, baseball, and other sports teams with a corresponding soccer team. This enables users to seamlessly immerse themselves in the realm of soccer.",
-      buttonText: "Video Tour",
+      buttonText: "Watch Video",
       image: "/images/footymatch.jpeg",
+      link: "https://www.loom.com/share/0356d9e637d64032a94a557658b4d114?sid=a84f35cd-b059-4dc2-a34c-02cb80d94012",
     },
     {
       title: "Custom AI GPTs",
       description:
         "Created custom GPTs for local business owners to expand customer reach and improve interactions, including BizFinder, SalesPathFinder, and Sortation, available on the GPT store and Chipp.ai marketplace.",
-      buttonText: "Website",
+      buttonText: "Visit Website",
       image: "/images/pathfinder.png",
+      link: "https://www.sterlingsales.co/",
     },
   ];
 
@@ -72,7 +76,8 @@ const Clients = () => {
     <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-10 space-y-6 pt-16">
       <h2
         className="text-4xl font-bold text-highlight mb-8 text-center"
-        // data-aos="fade-up"
+        // data-aos="fade-in"
+        // data-aos-delay="0"
       >
         Clients
       </h2>
@@ -98,39 +103,77 @@ const Clients = () => {
         </div>
       </div>
 
-      {/* Client Testimonials Section */}
-      <div
-        className="relative h-[300px] lg:h-[500px]"
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
-        <Image
-          src="/images/sparkcircle.jpg"
-          alt="Client success"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
-        />
-        {/* Overlay Section */}
-        <div className="absolute inset-0 bg-black/40 rounded-lg">
-          {/* Overlay Text at the Top */}
-          <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-t-lg">
-            <p className="text-white text-lg lg:text-4xl font-large text-left">
-              We value your feedback.
-            </p>
+      {/* Testimonials Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-10">
+        {/* Testimonials Image */}
+        <div
+          className="relative h-[300px] lg:h-[500px]"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <Image
+            src="/images/sparkcircle.jpg"
+            alt="Client success"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+          />
+          {/* Overlay Section */}
+          <div className="absolute inset-0 bg-black/40 rounded-lg">
+            <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-t-lg">
+              <p className="text-white text-lg lg:text-4xl font-large text-left">
+                We value your feedback.
+              </p>
+            </div>
+            <div className="absolute bottom-4 lg:bottom-6 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-b-lg">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfdo9PCKXn7DQYjLUhTCQcWd-5ZPQK02-kEZFq1O65_in3esA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition"
+              >
+                Write a Review
+              </a>
+            </div>
           </div>
+        </div>
 
-          {/* Become a Satisfied Customer Section */}
-          <div className="absolute bottom-4 lg:bottom-6 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-b-lg">
-            <button className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition">
-              Write a Review
-            </button>
-          </div>
+        {/* Scrollable Testimonials */}
+        <div
+          className="space-y-6 h-[300px] lg:h-[500px] overflow-y-auto"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className={`rounded-lg p-6 shadow-lg ${
+                index === 0 ? "bg-highlight/10" : "bg-dark/70"
+              }`}
+            >
+              <p className="text-gray-300 leading-relaxed mb-4">
+                {testimonial.text}
+              </p>
+              <div>
+                <h3 className="font-bold text-highlight">
+                  {testimonial.author}
+                </h3>
+                <p className="text-sm text-gray-400">{testimonial.position}</p>
+                <div className="flex mt-2">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, starIndex) => (
+                      <FaStar key={starIndex} className="text-highlight mr-1" />
+                    ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Down Arrow */}
-      <div className="flex justify-center py-6" data-aos="fade-up">
+      <div className="flex justify-center py-6" >
         <button
           className="text-highlight animate-bounce"
           onClick={scrollToProjects}
@@ -140,13 +183,12 @@ const Clients = () => {
       </div>
 
       {/* Example Projects Section */}
-      <div
-        id="projects"
-        className="pb-8"
-        // data-aos="fade-up"
-        // data-aos-delay="600"
-      >
-        <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
+      <div id="projects" className="pb-8">
+        <h2
+          className="text-4xl font-bold text-highlight mb-8 text-center"
+          data-aos="fade-in"
+          data-aos-delay="0"
+        >
           Example Projects
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -173,7 +215,7 @@ const Clients = () => {
                 <p className="text-white-600 text-md">{project.description}</p>
                 <div className="card-actions justify-end mt-4">
                   <a
-                    href="#"
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"
