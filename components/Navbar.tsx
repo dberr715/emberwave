@@ -34,7 +34,7 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               {/* Logo and "EMBERWAVE" (Left) */}
-              <div className="flex items-center space-x-4">
+              <a href="/" className="flex items-center space-x-4">
                 <Image
                   src="/images/singlenobg.png"
                   alt="Logo"
@@ -45,7 +45,7 @@ export default function Navbar() {
                 <span className="text-white/70 text-sm tracking-widest uppercase font-bold">
                   EmberWave
                 </span>
-              </div>
+              </a>
 
               {/* Navigation Links (Right-Aligned) */}
               <div className="hidden sm:ml-6 sm:block">

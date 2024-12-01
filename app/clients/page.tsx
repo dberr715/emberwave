@@ -1,9 +1,19 @@
 "use client";
 
+import { useEffect } from "react";
 import { FaChevronDown, FaStar } from "react-icons/fa";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Clients = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Trigger animations only once
+    });
+  }, []);
+
   const testimonials = [
     {
       text: `If you need an AI project done quickly and well by a 'no muss no fuss' guy, talk to David Berry. David listened to my ideas for a SalesGPT product that I had been wanting done for over a year, and in a weekend we had a functioning product.`,
@@ -60,11 +70,18 @@ const Clients = () => {
 
   return (
     <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-10 space-y-6 pt-16">
-      <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
+      <h2
+        className="text-4xl font-bold text-highlight mb-8 text-center"
+        // data-aos="fade-up"
+      >
         Clients
       </h2>
       {/* Horizontal Bar Section */}
-      <div className="bg-dark/50 rounded-lg py-6">
+      <div
+        className="bg-dark/50 rounded-lg py-6"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight">
@@ -82,7 +99,11 @@ const Clients = () => {
       </div>
 
       {/* Client Testimonials Section */}
-      <div className="relative h-[300px] lg:h-[500px]">
+      <div
+        className="relative h-[300px] lg:h-[500px]"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         <Image
           src="/images/sparkcircle.jpg"
           alt="Client success"
@@ -109,7 +130,7 @@ const Clients = () => {
       </div>
 
       {/* Down Arrow */}
-      <div className="flex justify-center py-6">
+      <div className="flex justify-center py-6" data-aos="fade-up">
         <button
           className="text-highlight animate-bounce"
           onClick={scrollToProjects}
@@ -119,7 +140,12 @@ const Clients = () => {
       </div>
 
       {/* Example Projects Section */}
-      <div id="projects" className="pb-8">
+      <div
+        id="projects"
+        className="pb-8"
+        // data-aos="fade-up"
+        // data-aos-delay="600"
+      >
         <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
           Example Projects
         </h2>
@@ -128,6 +154,8 @@ const Clients = () => {
             <div
               key={index}
               className="card bg-base-100 shadow-xl flex flex-col lg:flex-row items-stretch"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
             >
               <figure className="lg:w-1/2 w-full relative h-56 lg:h-auto">
                 <Image
