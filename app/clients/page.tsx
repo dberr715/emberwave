@@ -89,12 +89,17 @@ const Clients = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="text-center">
-            <h2 className="text-lg font-semibold text-highlight">
+            <h2 className="text-lg font-semibold text-highlight pb-2">
               Active Clients
             </h2>
-            <button className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition">
+            <a
+              href="https://projectstatustracker-26044.chipp.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition"
+            >
               Track your Project
-            </button>
+            </a>
           </div>
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight">Contact Us</h2>
@@ -173,7 +178,7 @@ const Clients = () => {
       </div>
 
       {/* Down Arrow */}
-      <div className="flex justify-center py-6" >
+      <div className="flex justify-center py-6">
         <button
           className="text-highlight animate-bounce"
           onClick={scrollToProjects}

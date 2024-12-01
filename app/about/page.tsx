@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -31,9 +32,24 @@ export default function AboutPage() {
             <p className="mt-4 text-lg leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
               frameworks, I specialize in crafting innovative software solutions
-              to enhance workflows. When I'm not coding, you'll find me running
-              with my wife, fly fishing, or playing pickleball.
+              to enhance workflows. When I&apos;m not coding, you&apos;ll find
+              me running with my wife, fly fishing, or playing pickleball.
             </p>
+            {/* Talk With Me Button */}
+            <div
+              className="flex justify-center mt-8"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a
+                href="https://cal.com/david-berry7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
+              >
+                Talk with me!
+              </a>
+            </div>
           </div>
           <div
             className="relative"
@@ -41,15 +57,16 @@ export default function AboutPage() {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <img
+            <Image
               src="/images/dabnobg.png"
               alt="David Berry"
+              width={400}
+              height={400}
               className="mx-auto shadow-lg object-cover rounded-lg"
             />
           </div>
         </div>
 
-    
         {/* Logos Section */}
         <div className="pt-12 bg-black text-white">
           <h3
@@ -67,50 +84,62 @@ export default function AboutPage() {
             data-aos-once="true"
           >
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src="/images/nextjswhite.png"
                 alt="Next.js"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
               <span className="mt-2 text-sm text-gray-300">Next.js</span>
             </div>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src="/images/react.png"
                 alt="React"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
               <span className="mt-2 text-sm text-gray-300">React</span>
             </div>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src="/images/wordpress.png"
                 alt="WordPress"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
               <span className="mt-2 text-sm text-gray-300">WordPress</span>
             </div>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src="/images/azure.png"
                 alt="Azure"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
               <span className="mt-2 text-sm text-gray-300">Azure</span>
             </div>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src="/images/djangowhite.png"
                 alt="Django"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
               <span className="mt-2 text-sm text-gray-300">Django</span>
             </div>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src="/images/powerbi.png"
                 alt="Power BI"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
               <span className="mt-2 text-sm text-gray-300">Power BI</span>
             </div>
@@ -118,7 +147,7 @@ export default function AboutPage() {
         </div>
 
         {/* Story Section */}
-        <div className="py-12  ">
+        <div className="py-12">
           <h3
             className="text-4xl font-bold text-center mb-8"
             data-aos="fade-down"
@@ -152,10 +181,12 @@ export default function AboutPage() {
               data-aos-duration="1000"
               data-aos-once="true"
             >
-              <img
+              <Image
                 src="/images/Whitenobg.png"
                 alt="My Story"
-                className="w-80 h-auto mx-auto rounded-lg shadow-md"
+                width={320}
+                height={320}
+                className="rounded-lg shadow-md mx-auto"
               />
             </div>
           </div>

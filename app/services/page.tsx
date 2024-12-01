@@ -80,9 +80,14 @@ const Services = () => {
             exceptional results tailored to your unique goals.
           </p>
           <div className="flex space-x-4">
-            <button className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition">
+            <a
+              href="https://cal.com/david-berry7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
+            >
               Let’s Talk!
-            </button>
+            </a>
           </div>
         </div>
 
