@@ -76,7 +76,7 @@ const Clients = () => {
           </div>
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight">Contact Us</h2>
-            <p className="text-white text-md">dberry3755@gmail.com</p>
+            <p className="text-white text-md">emberwavedevelopment@gmail.com</p>
           </div>
         </div>
       </div>
