@@ -12,6 +12,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
   useEffect(() => {
@@ -81,14 +82,14 @@ const Services = () => {
             exceptional results tailored to your unique goals.
           </p>
           <div className="flex space-x-4">
-            <a
+            <Link
               href="https://cal.com/david-berry7"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
             >
               Let’s Talk!
-            </a>
+            </Link>
           </div>
         </div>
 

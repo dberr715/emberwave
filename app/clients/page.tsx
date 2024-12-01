@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { FaChevronDown, FaStar } from "react-icons/fa";
 import Image from "next/image";
 import AOS from "aos";
@@ -76,8 +77,8 @@ const Clients = () => {
     <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-10 space-y-6 pt-16">
       <h2
         className="text-4xl font-bold text-highlight mb-8 text-center"
-        // data-aos="fade-in"
-        // data-aos-delay="0"
+        data-aos="fade-in"
+        data-aos-delay="0"
       >
         Clients
       </h2>
@@ -92,14 +93,14 @@ const Clients = () => {
             <h2 className="text-lg font-semibold text-highlight pb-2">
               Active Clients
             </h2>
-            <a
+            <Link
               href="https://projectstatustracker-26044.chipp.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition"
             >
               Track your Project
-            </a>
+            </Link>
           </div>
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight">Contact Us</h2>
@@ -131,14 +132,14 @@ const Clients = () => {
               </p>
             </div>
             <div className="absolute bottom-4 lg:bottom-6 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-b-lg">
-              <a
+              <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfdo9PCKXn7DQYjLUhTCQcWd-5ZPQK02-kEZFq1O65_in3esA/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition"
               >
                 Write a Review
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -219,14 +220,14 @@ const Clients = () => {
                 </h2>
                 <p className="text-white-600 text-md">{project.description}</p>
                 <div className="card-actions justify-end mt-4">
-                  <a
+                  <Link
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"
                   >
                     {project.buttonText}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

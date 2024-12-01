@@ -87,13 +87,13 @@ export default function Home() {
             </Link>
 
             {/* Smooth Scroll to Vision/Mission Section */}
-            <a
+            <Link
               href="#vision-mission"
-              onClick={handleSmoothScroll}
+              onClick={(e) => handleSmoothScroll(e)}
               className="text-highlight hover:text-highlight-dark font-medium flex items-center transition"
             >
               Learn More →
-            </a>
+            </Link>
           </div>
         </div>
 

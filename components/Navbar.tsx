@@ -3,6 +3,7 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
@@ -34,7 +35,7 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               {/* Logo and "EMBERWAVE" (Left) */}
-              <a href="/" className="flex items-center space-x-4">
+              <Link href="/" className="flex items-center space-x-4">
                 <Image
                   src="/images/singlenobg.png"
                   alt="Logo"
@@ -45,13 +46,13 @@ export default function Navbar() {
                 <span className="text-white/70 text-sm tracking-widest uppercase font-bold">
                   EmberWave
                 </span>
-              </a>
+              </Link>
 
               {/* Navigation Links (Right-Aligned) */}
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center space-x-6 justify-end">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className={classNames(
@@ -63,7 +64,7 @@ export default function Navbar() {
                       aria-current={pathname === item.href ? "page" : undefined}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -93,7 +94,7 @@ export default function Navbar() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
+                  as={Link}
                   href={item.href}
                   className={classNames(
                     pathname === item.href
