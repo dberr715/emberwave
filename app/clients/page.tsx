@@ -82,54 +82,29 @@ const Clients = () => {
       </div>
 
       {/* Client Testimonials Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="relative h-[500px]">
-          <Image
-            src="/images/sparkcircle.jpg"
-            alt="Client success"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg shadow-lg"
-          />
-          <div className="absolute inset-0 bg-black/40 rounded-lg">
-            <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-4 px-6 rounded-t-lg">
-              <p className="text-white text-lg lg:text-4xl font-large text-left">
-                We value your feedback.
-              </p>
-            </div>
-            <div className="absolute bottom-0 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-4 px-6 rounded-b-lg">
-              <button className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition">
-                Write a Review
-              </button>
-            </div>
+      <div className="relative h-[300px] lg:h-[500px]">
+        <Image
+          src="/images/sparkcircle.jpg"
+          alt="Client success"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg shadow-lg"
+        />
+        {/* Overlay Section */}
+        <div className="absolute inset-0 bg-black/40 rounded-lg">
+          {/* Overlay Text at the Top */}
+          <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-t-lg">
+            <p className="text-white text-lg lg:text-4xl font-large text-left">
+              We value your feedback.
+            </p>
           </div>
-        </div>
-        <div className="space-y-6 h-[500px] overflow-y-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`rounded-lg p-6 shadow-lg ${
-                index === 0 ? "bg-highlight/10" : "bg-dark/70"
-              }`}
-            >
-              <p className="text-gray-300 leading-relaxed mb-4">
-                {testimonial.text}
-              </p>
-              <div>
-                <h3 className="font-bold text-highlight">
-                  {testimonial.author}
-                </h3>
-                <p className="text-sm text-gray-400">{testimonial.position}</p>
-                <div className="flex mt-2">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, starIndex) => (
-                      <FaStar key={starIndex} className="text-highlight mr-1" />
-                    ))}
-                </div>
-              </div>
-            </div>
-          ))}
+
+          {/* Become a Satisfied Customer Section */}
+          <div className="absolute bottom-4 lg:bottom-6 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-b-lg">
+            <button className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition">
+              Write a Review
+            </button>
+          </div>
         </div>
       </div>
 
