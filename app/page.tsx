@@ -1,9 +1,19 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import VisionMission from "@/components/VisionMission";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Trigger animations only once
+    });
+  }, []);
+
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
@@ -13,7 +23,11 @@ export default function Home() {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
         const navbarHeight = 80; // Adjust to match the navbar height
-        const targetPosition = targetElement.offsetTop - navbarHeight;
+        const targetPosition =
+          targetElement.offsetTop -
+          navbarHeight +
+          targetElement.offsetHeight / 2 -
+          window.innerHeight / 2;
 
         window.scrollTo({
           top: targetPosition,
@@ -45,14 +59,25 @@ export default function Home() {
           id="hero"
           className="flex flex-col items-center justify-center text-center min-h-screen px-6"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
+          <h1
+            className="text-5xl md:text-7xl font-extrabold mb-6"
+            data-aos="fade-up"
+          >
             Dream. Design. Develop.
           </h1>
-          <p className="text-lg md:text-2xl font-medium text-gray-300 max-w-2xl">
+          <p
+            className="text-lg md:text-2xl font-medium text-gray-300 max-w-2xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Developing your business dreams through innovative technology and
             creative design.
           </p>
-          <div className="mt-8 flex space-x-4">
+          <div
+            className="mt-8 flex space-x-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             {/* Redirects to Services Page */}
             <Link
               href="/services"
@@ -77,7 +102,9 @@ export default function Home() {
           id="vision-mission"
           className="flex flex-col justify-center items-center min-h-screen bg-transparent py-16 px-6 sm:px-12 lg:px-20"
         >
-          <VisionMission />
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <VisionMission />
+          </div>
         </div>
       </div>
     </div>
