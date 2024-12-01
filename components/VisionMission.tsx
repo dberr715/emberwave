@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
+import Link from "next/link";
 
 const VisionMission = () => {
   useEffect(() => {
@@ -34,8 +36,10 @@ const VisionMission = () => {
           {/* AI Integration */}
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight/60 p-3 flex items-center justify-center shadow-lg">
-              <img
-                className="w-3/4 h-3/4 object-contain"
+              <Image
+                width={48}
+                height={48}
+                className="object-contain"
                 src="/images/ai-integration-icon.png"
                 alt="AI Integration"
               />
@@ -48,8 +52,10 @@ const VisionMission = () => {
           {/* Web Development */}
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight/60 p-3 flex items-center justify-center shadow-lg">
-              <img
-                className="w-3/4 h-3/4 object-contain"
+              <Image
+                width={48}
+                height={48}
+                className="object-contain"
                 src="/images/web-development-icon.png"
                 alt="Web Development"
               />
@@ -62,8 +68,10 @@ const VisionMission = () => {
           {/* Consulting */}
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight/60 p-3 flex items-center justify-center shadow-lg">
-              <img
-                className="w-3/4 h-3/4 object-contain"
+              <Image
+                width={48}
+                height={48}
+                className="object-contain"
                 src="/images/consulting-icon.png"
                 alt="Consulting"
               />
@@ -73,17 +81,16 @@ const VisionMission = () => {
             </h3>
           </div>
         </div>
+
         <div className="mt-6" data-aos="zoom-in" data-aos-delay="400">
-          <a
+          <Link
             href="/services"
             className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
           >
             See Our Services
-          </a>
+          </Link>
         </div>
       </div>
-
-      {/* "See Our Services" Button */}
     </div>
   );
 };

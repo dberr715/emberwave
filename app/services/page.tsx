@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 const Services = () => {
   useEffect(() => {
@@ -93,10 +94,12 @@ const Services = () => {
 
         {/* Image */}
         <div data-aos="fade-left">
-          <img
+          <Image
             src="/images/multiscreens.jpg"
             alt="Multiscreens"
-            className="rounded-lg shadow-lg h-96 object-cover"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-lg object-cover"
           />
         </div>
       </div>
