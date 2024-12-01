@@ -26,30 +26,30 @@ const Clients = () => {
     {
       title: "The Children's Center of Asheboro",
       description:
-        "The Children's Center of Asheboro never previously had an online presence. They wanted to establish a website to increase community awareness and ensure that new families moving into the area would easily find and learn about their services. Built using WordPress to provide a user-friendly, scalable solution that allowed them to effectively showcase their offerings and engage with the local community.",
+        "The Children's Center of Asheboro lacked an online presence and wanted a website to boost community awareness and help new families easily find and learn about their services. The site was built to be user-friendly, scalable, and effective in showcasing their offerings and engaging with the local community.",
       buttonText: "Website",
-      image: "images/Tree.jpg",
+      image: "/images/Tree.jpg",
     },
     {
       title: "Quad AI Lead Generator",
       description:
-        "Built for a supply chain logistics company, Quad AI is an expert of warehouse logistics for the customer to use. Quad uses AI, uploaded knowledge files, and directives to discover the user's warehouse issues and offer potential solutions. On the business side, administrators have access to chat data and user emails for potential warm lead generation.",
+        "Quad AI, built for a supply chain logistics company, uses AI and knowledge files to identify warehouse issues and suggest solutions. Administrators can access chat data and user emails for lead generation.",
       buttonText: "Website",
-      image: "images/quadspaceai.png",
+      image: "/images/quadspaceai.png",
     },
     {
       title: "FootyMatch",
       description:
         "Leveraging artificial intelligence, FootyMatch aligns users' preferred football, basketball, baseball, and other sports teams with a corresponding soccer team. This enables users to seamlessly immerse themselves in the realm of soccer.",
       buttonText: "Video Tour",
-      image: "images/footymatch.jpeg",
+      image: "/images/footymatch.jpeg",
     },
     {
       title: "Custom AI GPTs",
       description:
-        "Crafted numerous custom GPTs tailored to the needs of local business owners, with the goal of expanding their customer reach and enhancing user interactions. Examples include BizFinder, SalesPathFinder, and Sortation, all of which can be found on the GPT store or Chipp.ai marketplace.",
+        "Created custom GPTs for local business owners to expand customer reach and improve interactions, including BizFinder, SalesPathFinder, and Sortation, available on the GPT store and Chipp.ai marketplace.",
       buttonText: "Website",
-      image: "images/pathfinder.png",
+      image: "/images/pathfinder.png",
     },
   ];
 
@@ -66,7 +66,6 @@ const Clients = () => {
       {/* Horizontal Bar Section */}
       <div className="bg-dark/50 rounded-lg py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-          {/* Check Project Status */}
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight">
               Active Clients
@@ -75,8 +74,6 @@ const Clients = () => {
               Track your Project
             </button>
           </div>
-
-          {/* Contact Us Section */}
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight">Contact Us</h2>
             <p className="text-white text-md">dberry3755@gmail.com</p>
@@ -84,9 +81,8 @@ const Clients = () => {
         </div>
       </div>
 
-      {/* Existing Content */}
+      {/* Client Testimonials Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Image Section */}
         <div className="relative h-[500px]">
           <Image
             src="/images/sparkcircle.jpg"
@@ -95,16 +91,12 @@ const Clients = () => {
             objectFit="cover"
             className="rounded-lg shadow-lg"
           />
-          {/* Overlay Section */}
           <div className="absolute inset-0 bg-black/40 rounded-lg">
-            {/* Overlay Text at the Top */}
             <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-4 px-6 rounded-t-lg">
               <p className="text-white text-lg lg:text-4xl font-large text-left">
                 We value your feedback.
               </p>
             </div>
-
-            {/* Become a Satisfied Customer Section */}
             <div className="absolute bottom-0 right-0 flex flex-col items-end space-y-2 bg-gradient-to-t from-black/70 to-transparent py-4 px-6 rounded-b-lg">
               <button className="bg-highlight text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition">
                 Write a Review
@@ -112,8 +104,6 @@ const Clients = () => {
             </div>
           </div>
         </div>
-
-        {/* Scrollable Testimonials Section */}
         <div className="space-y-6 h-[500px] overflow-y-auto">
           {testimonials.map((testimonial, index) => (
             <div
@@ -144,7 +134,7 @@ const Clients = () => {
       </div>
 
       {/* Down Arrow */}
-      <div className="flex justify-center py-6 ">
+      <div className="flex justify-center py-6">
         <button
           className="text-highlight animate-bounce"
           onClick={scrollToProjects}
@@ -153,7 +143,6 @@ const Clients = () => {
         </button>
       </div>
 
-      {/* Example Projects Section */}
       {/* Example Projects Section */}
       <div id="projects" className="pb-8">
         <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
@@ -165,11 +154,13 @@ const Clients = () => {
               key={index}
               className="card bg-base-100 shadow-xl flex flex-col lg:flex-row items-stretch"
             >
-              <figure className="lg:w-2/5 w-full">
-              <Image
+              <figure className="lg:w-1/2 w-full relative h-56 lg:h-auto">
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto lg:h-full object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
                 />
               </figure>
               <div className="card-body flex-1 p-6">
