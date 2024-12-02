@@ -22,12 +22,8 @@ export default function Home() {
     if (targetId) {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        const navbarHeight = 80; // Adjust to match the navbar height
-        const targetPosition =
-          targetElement.offsetTop -
-          navbarHeight +
-          targetElement.offsetHeight / 2 -
-          window.innerHeight / 2;
+        const additionalOffset = -100; // Adjust this value to scroll further down
+        const targetPosition = targetElement.offsetTop - additionalOffset;
 
         window.scrollTo({
           top: targetPosition,
@@ -100,7 +96,7 @@ export default function Home() {
         {/* Vision and Mission Section */}
         <div
           id="vision-mission"
-          className="flex flex-col justify-center items-center min-h-screen bg-transparent py-16 px-6 sm:px-12 lg:px-20"
+          className="flex flex-col justify-center items-center min-h-screen bg-transparent py-12 px-6 sm:px-12 lg:px-20"
         >
           <div data-aos="fade-up" data-aos-duration="1000">
             <VisionMission />
