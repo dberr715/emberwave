@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   FaLaptopCode,
   FaBrain,
@@ -9,19 +10,8 @@ import {
   FaChalkboardTeacher,
   FaPencilRuler,
 } from "react-icons/fa";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Image from "next/image";
-import Link from "next/link";
 
 const Services = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: true, // Trigger animations only once
-    });
-  }, []);
-
   const services = [
     {
       title: "Web Development",
@@ -62,17 +52,11 @@ const Services = () => {
   ];
 
   return (
-    <div
-      className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 space-y-16"
-      data-aos="fade-up"
-    >
+    <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-16 space-y-16">
       {/* Hero Section */}
-      <div
-        className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12"
-        data-aos="fade-up"
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
         {/* Text Content */}
-        <div className="space-y-6" data-aos="fade-right">
+        <div className="space-y-6">
           <h1 className="text-5xl font-bold text-highlight">
             Empowering Your Vision
           </h1>
@@ -94,23 +78,20 @@ const Services = () => {
         </div>
 
         {/* Image */}
-        <div data-aos="fade-left">
+        <div>
           <Image
             src="/images/multiscreens.jpg"
             alt="Multiscreens"
-            width={600}
-            height={400}
+            width={800}
+            height={600}
             className="rounded-lg shadow-lg object-cover"
           />
         </div>
       </div>
 
       {/* Services Section */}
-      <div data-aos="fade-up">
-        <h2
-          className="text-4xl font-bold text-highlight mb-8 text-center"
-          data-aos="fade-down"
-        >
+      <div>
+        <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
           Our Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -118,8 +99,6 @@ const Services = () => {
             <div
               key={index}
               className="card glass shadow-lg p-6 flex flex-col justify-between"
-              data-aos="zoom-in"
-              data-aos-delay={index * 200}
             >
               <div className="flex items-center mb-4 space-x-4">
                 {service.icon}

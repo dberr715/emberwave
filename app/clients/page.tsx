@@ -1,20 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import { FaChevronDown, FaStar } from "react-icons/fa";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Clients = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: true, // Trigger animations only once
-    });
-  }, []);
-
   const testimonials = [
     {
       text: `If you need an AI project done quickly and well by a 'no muss no fuss' guy, talk to David Berry. David listened to my ideas for a SalesGPT product that I had been wanting done for over a year, and in a weekend we had a functioning product.`,
@@ -75,19 +65,11 @@ const Clients = () => {
 
   return (
     <div className="container mx-auto px-6 sm:px-12 lg:px-20 py-10 space-y-6 pt-16">
-      <h2
-        className="text-4xl font-bold text-highlight mb-8 text-center"
-        data-aos="fade-in"
-        data-aos-delay="0"
-      >
+      <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
         Clients
       </h2>
       {/* Horizontal Bar Section */}
-      <div
-        className="bg-dark/50 rounded-lg py-6"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
+      <div className="bg-dark/50 rounded-lg py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="text-center">
             <h2 className="text-lg font-semibold text-highlight pb-2">
@@ -112,11 +94,7 @@ const Clients = () => {
       {/* Testimonials Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-10">
         {/* Testimonials Image */}
-        <div
-          className="relative h-[300px] lg:h-[500px]"
-          data-aos="fade-right"
-          data-aos-delay="200"
-        >
+        <div className="relative h-[300px] lg:h-[500px]">
           <Image
             src="/images/sparkcircle.jpg"
             alt="Client success"
@@ -145,11 +123,7 @@ const Clients = () => {
         </div>
 
         {/* Scrollable Testimonials */}
-        <div
-          className="space-y-6 h-[300px] lg:h-[500px] overflow-y-auto"
-          data-aos="fade-left"
-          data-aos-delay="200"
-        >
+        <div className="space-y-6 h-[300px] lg:h-[500px] overflow-y-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -190,11 +164,7 @@ const Clients = () => {
 
       {/* Example Projects Section */}
       <div id="projects" className="pb-8">
-        <h2
-          className="text-4xl font-bold text-highlight mb-8 text-center"
-          data-aos="fade-in"
-          data-aos-delay="0"
-        >
+        <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
           Example Projects
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -202,8 +172,6 @@ const Clients = () => {
             <div
               key={index}
               className="card bg-base-100 shadow-xl flex flex-col lg:flex-row items-stretch"
-              data-aos="fade-up"
-              data-aos-delay={index * 200}
             >
               <figure className="lg:w-1/2 w-full relative h-56 lg:h-auto">
                 <Image

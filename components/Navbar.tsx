@@ -39,11 +39,11 @@ export default function Navbar() {
                 <Image
                   src="/images/singlenobg.png"
                   alt="Logo"
-                  width={35}
-                  height={35}
+                  width={50} // Increased size
+                  height={50} // Increased size
                   className="h-auto w-auto"
                 />
-                <span className="text-white/70 text-sm tracking-widest uppercase font-bold">
+                <span className="text-white/70 text-2xl tracking-widest uppercase font-bold">
                   EmberWave
                 </span>
               </Link>

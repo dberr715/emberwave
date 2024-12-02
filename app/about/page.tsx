@@ -148,7 +148,7 @@ export default function AboutPage() {
         </div>
 
         {/* Story Section */}
-        <div className="py-12">
+        <div className="py-32">
           <h3
             className="text-4xl font-bold text-center mb-8"
             data-aos="fade-down"
