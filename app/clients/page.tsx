@@ -37,7 +37,7 @@ const Clients = () => {
       description:
         "Quad AI, built for a supply chain logistics company, uses AI and knowledge files to identify warehouse issues and suggest solutions. Administrators can access chat data and user emails for lead generation.",
       buttonText: "Visit Website",
-      image: "/images/quadspaceai.png",
+      image: "/images/leads.jpg",
       link: "https://quadspace.us/",
     },
     {
@@ -45,15 +45,15 @@ const Clients = () => {
       description:
         "Leveraging artificial intelligence, FootyMatch aligns users' preferred football, basketball, baseball, and other sports teams with a corresponding soccer team. This enables users to seamlessly immerse themselves in the realm of soccer.",
       buttonText: "Watch Video",
-      image: "/images/footymatch.jpeg",
+      image: "/images/soccerball.jpg",
       link: "https://www.loom.com/share/0356d9e637d64032a94a557658b4d114?sid=a84f35cd-b059-4dc2-a34c-02cb80d94012",
     },
     {
-      title: "Custom AI GPTs",
+      title: "Custom AI Chatbots",
       description:
-        "Created custom GPTs for local business owners to expand customer reach and improve interactions, including BizFinder, SalesPathFinder, and Sortation, available on the GPT store and Chipp.ai marketplace.",
+        "Created custom AI chatbots for local business owners to expand customer reach and improve interactions, including BizFinder, SalesPathFinder, and Sortation, available on the GPT store and Chipp.ai marketplace.",
       buttonText: "Visit Website",
-      image: "/images/pathfinder.png",
+      image: "/images/chatbubble.jpg",
       link: "https://www.sterlingsales.co/",
     },
   ];
