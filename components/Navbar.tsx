@@ -34,19 +34,29 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              {/* Logo and "EMBERWAVE" (Left) */}
-              <Link href="/" className="flex items-center space-x-4">
-                <Image
-                  src="/images/singlenobg.png"
-                  alt="Logo"
-                  width={50} // Increased size
-                  height={50} // Increased size
-                  className="h-auto w-auto"
-                />
-                <span className="text-white/70 text-2xl tracking-widest uppercase font-bold">
+              {/* Logo */}
+              <div className="flex items-center">
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/images/singlenobg.png"
+                    alt="Logo"
+                    width={50} // Adjust size as needed
+                    height={50} // Adjust size as needed
+                    className="h-auto w-auto"
+                  />
+                </Link>
+
+                {/* EmberWave Text - Responsive Alignment */}
+                <span
+                  className={classNames(
+                    "text-white/70 text-2xl tracking-widest uppercase font-bold",
+                    "absolute left-1/2 transform -translate-x-1/2", // Centered by default (mobile)
+                    "sm:relative sm:translate-x-0 sm:left-0 sm:ml-2" // Left-aligned on desktop
+                  )}
+                >
                   EmberWave
                 </span>
-              </Link>
+              </div>
 
               {/* Navigation Links (Right-Aligned) */}
               <div className="hidden sm:ml-6 sm:block">
