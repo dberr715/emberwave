@@ -28,7 +28,7 @@ export default function AboutPage() {
               about.
             </h1>
             <h2 className="text-xl font-medium">
-              David Berry, Owner & Lead Developer
+              David Berry, Founder & Lead Developer
             </h2>
             <p className="mt-4 text-lg leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
