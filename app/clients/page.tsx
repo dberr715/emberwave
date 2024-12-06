@@ -12,6 +12,11 @@ const Clients = () => {
       position: "CEO/Owner/Author, Foxfire Software, and Sterling Sales",
     },
     {
+      text: `David goes above and beyond in customer service, making sure you are completely satisfied with the results. His design was above what I even expected and I am well pleased with our new website. He left no stone unturned in presenting our business in it's best light and making sure it had all of the information we asked for in a well laid out manner that is attractive and informative. He took the time we needed at every stage to make sure we were happy and satisfied. Always friendly and patient. Will definitely do work with him again!`,
+      author: "Debbie Lockhart",
+      position: "Director, The Children's Center of Asheboro",
+    },
+    {
       text: `I'm thrilled to recommend David and EmberWave, who brings a unique blend of teaching experience and technical expertise to his work in software development. David's work ethic is truly commendable—he embraces hard work, isn't hesitant to seek clarification, and readily extends a helping hand.`,
       author: "Sean Reid",
       position: "Owner/Teacher, TorchCodeLab",
