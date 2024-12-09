@@ -24,13 +24,13 @@ export default function AboutPage() {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <h1 className="text-6xl font-extrabold mb-4 text-highlight">
+            <h1 className="text-7xl font-extrabold mb-4 text-highlight">
               about.
             </h1>
-            <h2 className="text-xl font-medium">
+            <h2 className="text-3xl font-bold">
               David Berry, Founder & Lead Developer
             </h2>
-            <p className="mt-4 text-lg leading-relaxed">
+            <p className="mt-4 text-2xl leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
               frameworks, I specialize in crafting innovative software solutions
               to enhance workflows. When I&apos;m not coding, you&apos;ll find
@@ -46,7 +46,7 @@ export default function AboutPage() {
                 href="https://cal.com/david-berry7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
+                className="bg-highlight text-white text-lg font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
               >
                 Talk with me!
               </Link>
@@ -76,7 +76,7 @@ export default function AboutPage() {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            Tools & Technologies I Love
+            Commonly Used Tools & Technologies
           </h3>
           <div
             className="flex flex-wrap justify-center gap-10 items-center"
