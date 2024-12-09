@@ -9,7 +9,7 @@ const Clients = () => {
     {
       text: `If you need an AI project done quickly and well by a 'no muss no fuss' guy, talk to David Berry. David listened to my ideas for a SalesGPT product that I had been wanting done for over a year, and in a weekend we had a functioning product.`,
       author: "John Sterling",
-      position: "CEO/Owner/Author, Foxfire Software, and Sterling Sales",
+      position: "CEO/Owner/Author, Foxfire Software, Sterling Sales",
     },
     {
       text: `David goes above and beyond in customer service, making sure you are completely satisfied with the results. His design was above what I even expected and I am well pleased with our new website. He left no stone unturned in presenting our business in it's best light and making sure it had all of the information we asked for in a well laid out manner that is attractive and informative. He took the time we needed at every stage to make sure we were happy and satisfied. Always friendly and patient. Will definitely do work with him again!`,
@@ -138,19 +138,20 @@ const Clients = () => {
                 index % 2 === 0 ? "bg-highlight/30" : "bg-dark/90"
               }`}
             >
-              <p className="text-white text-lg leading-relaxed mb-4">
+              
+              <p className="text-white lg:text-lg text-sm leading-relaxed mb-4">
                 {testimonial.text}
               </p>
               <div>
-                <h3 className="font-bold text-lg text-highlight">
+                <h3 className="font-bold lg:text-lg text-highlight">
                   {testimonial.author}
                 </h3>
-                <p className="text-md text-gray-400">{testimonial.position}</p>
+                <p className="lg:text-md text-sm text-gray-400">{testimonial.position}</p>
                 <div className="flex mt-2">
                   {Array(5)
                     .fill(0)
                     .map((_, starIndex) => (
-                      <FaStar key={starIndex} className="text-highlight text-2xl mr-1" />
+                      <FaStar key={starIndex} className="text-highlight text-md lg:text-2xl mr-1" />
                     ))}
                 </div>
               </div>
@@ -171,7 +172,7 @@ const Clients = () => {
 
       {/* Example Projects Section */}
       <div id="projects" className="pb-8">
-        <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
+        <h2 className="lg:text-4xl font-bold text-highlight mb-8 text-center">
           Example Projects
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -190,16 +191,16 @@ const Clients = () => {
                 />
               </figure>
               <div className="card-body flex-1 p-6">
-                <h2 className="card-title text-3xl font-semibold">
+                <h2 className="card-title lg:text-3xl text-xl font-semibold">
                   {project.title}
                 </h2>
-                <p className="text-white-600 text-lg">{project.description}</p>
+                <p className="text-white-600 lg:text-lg text-md">{project.description}</p>
                 <div className="card-actions justify-end mt-4">
                   <Link
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn text-lg btn-primary"
+                    className="btn lg:text-lg text-md btn-primary"
                   >
                     {project.buttonText}
                   </Link>
