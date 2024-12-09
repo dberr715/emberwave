@@ -62,7 +62,7 @@ export default function Home() {
             Dream. Design. Develop.
           </h1>
           <p
-            className="text-lg md:text-2xl font-medium text-gray-300 max-w-2xl"
+            className="text-lg md:text-2xl font-medium text-white max-w-2xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -86,7 +86,7 @@ export default function Home() {
             <Link
               href="#vision-mission"
               onClick={(e) => handleSmoothScroll(e)}
-              className="text-highlight hover:text-highlight-dark font-medium flex items-center transition"
+              className="text-highlight hover:text-highlight-dark text-xl font-extrabold flex items-center transition"
             >
               Learn More →
             </Link>

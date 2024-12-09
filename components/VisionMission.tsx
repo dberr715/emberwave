@@ -16,13 +16,13 @@ const VisionMission = () => {
     <div className="relative h-screen flex flex-col justify-center items-center">
       {/* Vision Statement and Hexagons */}
       <div
-        className="relative bg-dark/70 text-white text-center py-8 px-6 sm:px-12 lg:px-20 rounded-lg shadow-lg max-w-4xl"
+        className="relative bg-dark/90 text-white text-center py-8 px-6 sm:px-12 lg:px-20 rounded-lg shadow-lg max-w-4xl"
         data-aos="fade-up"
       >
         <h2 className="text-highlight text-5xl md:text-6xl font-bold mb-6">
           We aim to...
         </h2>
-        <p className="text-lg md:text-3xl text-gray-300 mb-8">
+        <p className="text-lg md:text-3xl text-white-300 mb-8">
           Design & develop dynamic web & technological solutions that help
           businesses and individuals make their dreams a reality.
         </p>
@@ -35,7 +35,7 @@ const VisionMission = () => {
         >
           {/* AI Integration */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight/60 p-3 flex items-center justify-center shadow-lg">
+            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
               <Image
                 width={48}
                 height={48}
@@ -51,7 +51,7 @@ const VisionMission = () => {
 
           {/* Web Development */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight/60 p-3 flex items-center justify-center shadow-lg">
+            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
               <Image
                 width={48}
                 height={48}
@@ -67,7 +67,7 @@ const VisionMission = () => {
 
           {/* Consulting */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight/60 p-3 flex items-center justify-center shadow-lg">
+            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
               <Image
                 width={48}
                 height={48}

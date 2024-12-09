@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         highlight: "#f9a53f", // Orange
         "highlight-dark": "#c77826", // Darker orange
-        "highlight-light": "#fcd5a5", // Light orange
+        "highlight-light": "#fcd5a5",
+        fire: "#ef5531", // darker fire orange
         dark: "#292929", // Dark background
         body: "#b6cbce", // General body color
         heading: "#eef3db", // Heading text color
