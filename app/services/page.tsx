@@ -16,7 +16,7 @@ const Services = () => {
     {
       title: "Web Development",
       description:
-        "Building modern, responsive, and user-friendly websites to enhance your online presence and engagement.",
+        "Building modern, responsive, and user-friendly websites to enhance your online presence.",
       icon: <FaLaptopCode size={48} className="text-highlight" />,
     },
     {
@@ -34,19 +34,19 @@ const Services = () => {
     {
       title: "Cloud/DevOps Consulting",
       description:
-        "Optimizing your infrastructure and deployment processes with tailored cloud and DevOps strategies.",
+        "Optimizing your infrastructure with tailored cloud and DevOps strategies.",
       icon: <FaCloud size={48} className="text-highlight" />,
     },
     {
       title: "Dashboard Creation",
       description:
-        "Designing and implementing data-driven dashboards to provide actionable insights and support decision-making.",
+        "Designing data-driven dashboards to provide actionable insights and support decision-making.",
       icon: <FaChartBar size={48} className="text-highlight" />,
     },
     {
       title: "Technical Training",
       description:
-        "Providing expert-led training sessions to equip your team with the skills they need to succeed in a tech-driven world.",
+        "Providing expert-led training sessions to equip your team with the skills they need to succeed.",
       icon: <FaChalkboardTeacher size={48} className="text-highlight" />,
     },
   ];
@@ -60,7 +60,7 @@ const Services = () => {
           <h1 className="text-5xl font-bold text-highlight">
             Empowering Your Vision
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-2xl text-white">
             We bring your business ideas to life with innovative solutions that
             connect, engage, and inspire. From strategy to execution, we deliver
             exceptional results tailored to your unique goals.
@@ -94,7 +94,7 @@ const Services = () => {
         <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
           Our Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -102,9 +102,11 @@ const Services = () => {
             >
               <div className="flex items-center mb-4 space-x-4">
                 {service.icon}
-                <h2 className="card-title text-highlight">{service.title}</h2>
+                <h2 className="card-title text-2xl text-highlight">
+                  {service.title}
+                </h2>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-white text-lg leading-relaxed">
                 {service.description}
               </p>
             </div>

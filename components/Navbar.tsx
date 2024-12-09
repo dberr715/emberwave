@@ -50,7 +50,7 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center">
                   <span
                     className={classNames(
-                      "text-white/70 text-2xl tracking-widest uppercase font-bold",
+                      "text-white/ text-2xl tracking-widest uppercase font-bold",
                       "absolute left-1/2 transform -translate-x-1/2", // Centered by default (mobile)
                       "sm:relative sm:translate-x-0 sm:left-0 sm:ml-2" // Left-aligned on desktop
                     )}
