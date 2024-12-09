@@ -24,7 +24,7 @@ export default function AboutPage() {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <h1 className="text-7xl font-extrabold mb-4 text-highlight">
+            <h1 className="text-5xl font-extrabold mb-4 text-highlight">
               about.
             </h1>
             <h2 className="lg:text-3xl text-lg font-bold">
