@@ -18,7 +18,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
 
         <script>
-          window.CHIPP_APP_URL = 'https://emberwave-26044.chipp.ai';
+          window.CHIPP_APP_URL = "https://emberwave-26044.chipp.ai";
           window.CHIPP_APP_ID = 26044;
         </script>
 
