@@ -27,10 +27,10 @@ export default function AboutPage() {
             <h1 className="text-7xl font-extrabold mb-4 text-highlight">
               about.
             </h1>
-            <h2 className="text-3xl font-bold">
+            <h2 className="lg:text-3xl text-lg font-bold">
               David Berry, Founder & Lead Developer
             </h2>
-            <p className="mt-4 text-2xl leading-relaxed">
+            <p className="mt-4 lg:text-xl text-md leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
               frameworks, I specialize in crafting innovative software solutions
               to enhance workflows. When I&apos;m not coding, you&apos;ll find
@@ -46,7 +46,7 @@ export default function AboutPage() {
                 href="https://cal.com/david-berry7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-highlight text-white text-lg font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
+                className="bg-highlight text-white lg:text-lg text-md font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
               >
                 Talk with me!
               </Link>
