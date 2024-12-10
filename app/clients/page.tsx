@@ -93,7 +93,11 @@ const Clients = () => {
             <h2 className="text-2xl font-semibold text-highlight">
               Contact Us
             </h2>
-            <p className="text-white text-xl">emberwavedevelopment@gmail.com</p>
+            <p className="text-white text-lg lg:text-xl">
+              <a href="mailto:emberwavedevelopment@gmail.com">
+                emberwavedevelopment@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -112,7 +116,7 @@ const Clients = () => {
           {/* Overlay Section */}
           <div className="absolute inset-0 bg-black/40 rounded-lg">
             <div className="absolute top-0 left-0 right-0 flex items-center justify-start bg-gradient-to-b from-black/70 to-transparent py-2 px-4 lg:py-4 lg:px-6 rounded-t-lg">
-              <p className="text-white text-lg lg:text-4xl font-large text-left">
+              <p className="text-white text-2xl lg:text-4xl font-large text-left">
                 We value your feedback.
               </p>
             </div>
@@ -130,7 +134,7 @@ const Clients = () => {
         </div>
 
         {/* Scrollable Testimonials */}
-        <div className="space-y-6 h-[300px] lg:h-[500px] overflow-y-auto">
+        <div className="space-y-6 h-[500px] lg:h-[500px] overflow-y-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -138,7 +142,6 @@ const Clients = () => {
                 index % 2 === 0 ? "bg-highlight/30" : "bg-dark/90"
               }`}
             >
-              
               <p className="text-white lg:text-lg text-sm leading-relaxed mb-4">
                 {testimonial.text}
               </p>
@@ -146,12 +149,17 @@ const Clients = () => {
                 <h3 className="font-bold lg:text-lg text-highlight">
                   {testimonial.author}
                 </h3>
-                <p className="lg:text-md text-sm text-gray-400">{testimonial.position}</p>
+                <p className="lg:text-md text-sm text-gray-400">
+                  {testimonial.position}
+                </p>
                 <div className="flex mt-2">
                   {Array(5)
                     .fill(0)
                     .map((_, starIndex) => (
-                      <FaStar key={starIndex} className="text-highlight text-md lg:text-2xl mr-1" />
+                      <FaStar
+                        key={starIndex}
+                        className="text-highlight text-md lg:text-2xl mr-1"
+                      />
                     ))}
                 </div>
               </div>
@@ -194,7 +202,9 @@ const Clients = () => {
                 <h2 className="card-title lg:text-3xl text-xl font-semibold">
                   {project.title}
                 </h2>
-                <p className="text-white-600 lg:text-lg text-md">{project.description}</p>
+                <p className="text-white-600 lg:text-lg text-md">
+                  {project.description}
+                </p>
                 <div className="card-actions justify-end mt-4">
                   <Link
                     href={project.link}

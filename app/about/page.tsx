@@ -30,7 +30,7 @@ export default function AboutPage() {
             <h2 className="lg:text-3xl text-lg font-bold">
               David Berry, Founder & Lead Developer
             </h2>
-            <p className="mt-4 lg:text-xl text-md leading-relaxed">
+            <p className="mt-4 lg:text-lg text-md leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
               frameworks, I specialize in crafting innovative software solutions
               to enhance workflows. When I&apos;m not coding, you&apos;ll find
