@@ -67,7 +67,7 @@ const Services = () => {
           </p>
           <div className="flex space-x-4">
             <Link
-              href="https://cal.com/david-berry7"
+              href="https://cal.com/emberwave"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-highlight text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"

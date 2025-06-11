@@ -43,7 +43,7 @@ export default function AboutPage() {
               data-aos-delay="200"
             >
               <Link
-                href="https://cal.com/david-berry7"
+                href="https://cal.com/emberwave"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-highlight text-white lg:text-lg text-md font-semibold px-6 py-3 rounded-lg shadow hover:bg-highlight-dark transition"
