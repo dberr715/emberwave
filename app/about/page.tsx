@@ -19,7 +19,7 @@ export default function AboutPage() {
     { name: "React", logo: "/images/react.png" },
     { name: "C#", logo: "/images/csharp.png" },
     { name: ".NET", logo: "/images/dotnet.png" },
-    { name: "Django", logo: "/images/djangowhite.png" },
+    { name: "Django", logo: "/images/django2.png" },
     { name: "Azure", logo: "/images/azure.png" },
     { name: "WordPress", logo: "/images/wordpress.png" },
     { name: "Power BI", logo: "/images/powerbi.png" },
@@ -28,10 +28,16 @@ export default function AboutPage() {
   const aiTools = [
     { name: "Claude/Anthropic", logo: "/images/ai-logos/Claude_AI_symbol.svg" },
     { name: "OpenAI/ChatGPT", logo: "/images/ai-logos/openai.png" },
-    { name: "Gemini", logo: "/images/ai-logos/gemini-google-icon-symbol-logo-free-png.webp" },
+    {
+      name: "Gemini",
+      logo: "/images/ai-logos/gemini-google-icon-symbol-logo-free-png.webp",
+    },
     { name: "Grok", logo: "/images/ai-logos/grok2.svg" },
     { name: "GitHub Copilot", logo: "/images/ai-logos/github-copilot.jpg" },
-    { name: "Microsoft Copilot", logo: "/images/ai-logos/Microsoft-Copilot-Logo.png" },
+    {
+      name: "Microsoft Copilot",
+      logo: "/images/ai-logos/Microsoft-Copilot-Logo.png",
+    },
     { name: "HeyGen", logo: "/images/ai-logos/heygen.jpeg" },
     { name: "Sintra.AI", logo: "/images/ai-logos/sintra.ai.svg" },
     { name: "GoHighLevel", logo: "/images/ai-logos/highlevel.webp" },
@@ -57,8 +63,8 @@ export default function AboutPage() {
             <p className="mt-4 lg:text-lg text-md leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
               frameworks, I specialize in crafting innovative software solutions
-              and integrating cutting-edge AI tools to enhance business workflows
-              and productivity.
+              and integrating cutting-edge AI tools to enhance business
+              workflows and productivity.
             </p>
             {/* Talk With Me Button */}
             <div
@@ -164,10 +170,7 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <div className="py-16 text-center">
-          <h3
-            className="text-3xl font-bold mb-4"
-            data-aos="fade-up"
-          >
+          <h3 className="text-3xl font-bold mb-4" data-aos="fade-up">
             Ready to get started?
           </h3>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
