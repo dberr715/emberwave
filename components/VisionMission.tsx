@@ -20,16 +20,16 @@ const VisionMission = () => {
         data-aos="fade-up"
       >
         <h2 className="text-highlight text-5xl md:text-6xl font-bold mb-6">
-          We aim to...
+          We bring AI to your business
         </h2>
         <p className="text-lg md:text-3xl text-white-300 mb-8">
-          Design & develop dynamic web & technological solutions that help
-          businesses and individuals make their dreams a reality.
+          Integrate powerful AI tools, build intelligent chatbots, automate
+          workflows, and create modern web experiences that drive results.
         </p>
 
         {/* Hexagonal Icons with Labels */}
         <div
-          className="flex justify-center gap-4 mt-4 flex-wrap md:flex-nowrap"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -44,28 +44,12 @@ const VisionMission = () => {
                 alt="AI Integration"
               />
             </div>
-            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4">
+            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4 whitespace-nowrap">
               AI Integration
             </h3>
           </div>
 
-          {/* Web Development */}
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
-              <Image
-                width={48}
-                height={48}
-                className="object-contain"
-                src="/images/web-development-icon.png"
-                alt="Web Development"
-              />
-            </div>
-            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4">
-              Web Development
-            </h3>
-          </div>
-
-          {/* Consulting */}
+          {/* AI Chatbots */}
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
               <Image
@@ -73,11 +57,43 @@ const VisionMission = () => {
                 height={48}
                 className="object-contain"
                 src="/images/consulting-icon.png"
-                alt="Consulting"
+                alt="AI Chatbots"
               />
             </div>
-            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4">
-              Consulting
+            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4 whitespace-nowrap">
+              AI Chatbots
+            </h3>
+          </div>
+
+          {/* Web Dev */}
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
+              <Image
+                width={48}
+                height={48}
+                className="object-contain"
+                src="/images/web-development-icon.png"
+                alt="Web Dev"
+              />
+            </div>
+            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4 whitespace-nowrap">
+              Web Dev
+            </h3>
+          </div>
+
+          {/* AI Training */}
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 mask mask-hexagon bg-highlight p-3 flex items-center justify-center shadow-lg">
+              <Image
+                width={48}
+                height={48}
+                className="object-contain"
+                src="/images/consulting-icon.png"
+                alt="AI Training"
+              />
+            </div>
+            <h3 className="text-highlight text-xs md:text-lg font-bold mt-2 md:mt-4 whitespace-nowrap">
+              AI Training
             </h3>
           </div>
         </div>

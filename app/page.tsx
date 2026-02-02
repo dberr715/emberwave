@@ -59,15 +59,15 @@ export default function Home() {
             className="text-5xl md:text-7xl font-extrabold mb-6"
             data-aos="fade-up"
           >
-            Dream. Design. Develop.
+            AI-Powered Innovation
           </h1>
           <p
             className="text-lg md:text-2xl font-medium text-white max-w-2xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Developing your business dreams through innovative technology and
-            creative design.
+            Transforming businesses with intelligent AI solutions, custom
+            integrations, and modern web experiences.
           </p>
           <div
             className="mt-8 flex space-x-4"

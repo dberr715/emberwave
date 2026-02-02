@@ -9,10 +9,34 @@ import Link from "next/link";
 export default function AboutPage() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: true, // Animation triggers only once
+      duration: 1000,
+      once: true,
     });
   }, []);
+
+  const technologies = [
+    { name: "Next.js", logo: "/images/nextjs2.png" },
+    { name: "React", logo: "/images/react.png" },
+    { name: "C#", logo: "/images/csharp.png" },
+    { name: ".NET", logo: "/images/dotnet.png" },
+    { name: "Django", logo: "/images/djangowhite.png" },
+    { name: "Azure", logo: "/images/azure.png" },
+    { name: "WordPress", logo: "/images/wordpress.png" },
+    { name: "Power BI", logo: "/images/powerbi.png" },
+  ];
+
+  const aiTools = [
+    { name: "Claude/Anthropic", logo: "/images/ai-logos/Claude_AI_symbol.svg" },
+    { name: "OpenAI/ChatGPT", logo: "/images/ai-logos/openai.png" },
+    { name: "Gemini", logo: "/images/ai-logos/gemini-google-icon-symbol-logo-free-png.webp" },
+    { name: "Grok", logo: "/images/ai-logos/grok2.svg" },
+    { name: "GitHub Copilot", logo: "/images/ai-logos/github-copilot.jpg" },
+    { name: "Microsoft Copilot", logo: "/images/ai-logos/Microsoft-Copilot-Logo.png" },
+    { name: "HeyGen", logo: "/images/ai-logos/heygen.jpeg" },
+    { name: "Sintra.AI", logo: "/images/ai-logos/sintra.ai.svg" },
+    { name: "GoHighLevel", logo: "/images/ai-logos/highlevel.webp" },
+    { name: "Clawdbot/Moltbot", logo: "/images/ai-logos/clawdbot-logo.png" },
+  ];
 
   return (
     <section className="bg-black text-gray-800 dark:text-gray-100 pt-12">
@@ -33,8 +57,8 @@ export default function AboutPage() {
             <p className="mt-4 lg:text-lg text-md leading-relaxed">
               With a strong foundation in AI, cloud technologies, and modern
               frameworks, I specialize in crafting innovative software solutions
-              to enhance workflows. When I&apos;m not coding, you&apos;ll find
-              me running with my wife, fly fishing, or playing pickleball.
+              and integrating cutting-edge AI tools to enhance business workflows
+              and productivity.
             </p>
             {/* Talk With Me Button */}
             <div
@@ -68,129 +92,97 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Logos Section */}
-        <div className="pt-12 bg-black text-white">
+        {/* AI Tools Section */}
+        <div className="pt-12 pb-8 bg-black text-white">
           <h3
             className="text-3xl font-bold text-center mb-8"
             data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            Commonly Used Tools & Technologies
+            AI Platforms & Integrations
           </h3>
           <div
-            className="flex flex-wrap justify-center gap-10 items-center"
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-6 justify-items-center"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/nextjswhite.png"
-                alt="Next.js"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <span className="mt-2 text-sm text-gray-300">Next.js</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/react.png"
-                alt="React"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <span className="mt-2 text-sm text-gray-300">React</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/wordpress.png"
-                alt="WordPress"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <span className="mt-2 text-sm text-gray-300">WordPress</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/azure.png"
-                alt="Azure"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <span className="mt-2 text-sm text-gray-300">Azure</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/djangowhite.png"
-                alt="Django"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <span className="mt-2 text-sm text-gray-300">Django</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/powerbi.png"
-                alt="Power BI"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <span className="mt-2 text-sm text-gray-300">Power BI</span>
-            </div>
+            {aiTools.map((tool, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <Image
+                    src={tool.logo}
+                    alt={tool.name}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="mt-2 text-xs text-gray-300 text-center">
+                  {tool.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Story Section */}
-        <div className="py-32">
+        {/* Technologies Section */}
+        <div className="py-12 bg-black text-white">
           <h3
-            className="text-4xl font-bold text-center mb-8"
+            className="text-3xl font-bold text-center mb-8"
             data-aos="fade-down"
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            The EmberWave Story
+            Tools & Technologies
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-once="true"
-            >
-              <p className="text-lg leading-relaxed">
-                I began my journey as a high school science teacher, where I
-                developed the ability to simplify complex concepts and
-                communicate them clearly. This skill laid the foundation for my
-                transition into software development, driven by a passion for
-                using technology to solve real-world problems. Starting
-                EmberWave was a natural progression, allowing me to combine my
-                creativity and technical expertise to build innovative
-                solutions. Today, I bring this unique blend of experience and
-                dedication to every project, ensuring that each one reflects my
-                commitment to excellence.
-              </p>
-            </div>
-            <div
-              className="text-center"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once="true"
-            >
-              <Image
-                src="/images/Whitenobg.png"
-                alt="My Story"
-                width={320}
-                height={320}
-                className="rounded-lg shadow-md mx-auto"
-              />
-            </div>
+          <div
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 justify-items-center"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            {technologies.map((tech, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <Image
+                    src={tech.logo}
+                    alt={tech.name}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="mt-2 text-xs text-gray-300 text-center">
+                  {tech.name}
+                </span>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="py-16 text-center">
+          <h3
+            className="text-3xl font-bold mb-4"
+            data-aos="fade-up"
+          >
+            Ready to get started?
+          </h3>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how we can integrate AI solutions and modern
+            technology into your business.
+          </p>
+          <Link
+            href="https://cal.com/emberwave"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-highlight text-white font-semibold px-8 py-4 rounded-lg shadow hover:bg-highlight-dark transition text-lg"
+            data-aos="zoom-in"
+          >
+            Schedule a Consultation
+          </Link>
         </div>
       </div>
     </section>

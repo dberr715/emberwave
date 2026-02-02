@@ -30,6 +30,30 @@ const Clients = () => {
 
   const projects = [
     {
+      title: "The Sales Professor",
+      description:
+        "An interactive AI avatar powered by HeyGen that helps users entering the field of sales. Ask any sales questions and get expert guidance on techniques, strategies, and best practices to kickstart your sales career.",
+      buttonText: "Try It Out",
+      image: "/images/SalesProfessor.png",
+      link: "https://labs.heygen.com/guest/interactive-avatar/share?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJjNzJjZmE4NjFiMTU0MTE5ODlhYWU3OWM2%0D%0ANTRlNzZiMyIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3Yz%0D%0AL2M3MmNmYTg2MWIxNTQxMTk4OWFhZTc5YzY1NGU3NmIzL2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0%0D%0ALndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6ImY1%0D%0AYjU2ZDBjMGZjNDQ3MDg4NjA0M2M4ZTIzMTRiYjA4Iiwic2hhcmVfY29kZSI6IjljMDZkY2ZkLWVl%0D%0AYjktNGE0OS04NzQwLWQ1YzJkM2M0YzIzZiIsInVzZXJuYW1lIjoiYjQwMDFjNDcwZDU1NGRmNThk%0D%0ANzQ4YzEyOTA4MDBkZmEifQ%3D%3D",
+    },
+    {
+      title: "Sylvester: 9 Lives",
+      description:
+        "An interactive chatbot that lets you explore alternate life paths. Discover where you might end up based on different choices—focus on family or climb the career ladder, try different jobs, or move to new locations. Like the game of life, but personalized to your decisions.",
+      buttonText: "Try It Out",
+      image: "/images/sylvester9lives.png",
+      link: "https://9livestryonanewyou-32427.chipp.ai",
+    },
+    {
+      title: "SalesPathFinder",
+      description:
+        "An AI-powered tool to help users discover which sales pathway is right for them. Run mock interviews, get personalized networking tips, and explore different sales career paths to find your perfect fit.",
+      buttonText: "Try It Out",
+      image: "/images/salespathfinder.png",
+      link: "https://salespathfinder-16268.chipp.ai",
+    },
+    {
       title: "The Children's Center of Asheboro",
       description:
         "The Children's Center of Asheboro lacked an online presence and wanted a website to boost community awareness and help new families easily find and learn about their services. The site was built to be user-friendly, scalable, and effective in showcasing their offerings and engaging with the local community.",
@@ -53,14 +77,6 @@ const Clients = () => {
       image: "/images/soccerball.jpg",
       link: "https://www.loom.com/share/0356d9e637d64032a94a557658b4d114?sid=a84f35cd-b059-4dc2-a34c-02cb80d94012",
     },
-    {
-      title: "Custom AI Chatbots",
-      description:
-        "Created custom AI chatbots for local business owners to expand customer reach and improve interactions, including BizFinder, SalesPathFinder, and Sortation, available on the GPT store and Chipp.ai marketplace.",
-      buttonText: "Visit Website",
-      image: "/images/chatbubble.jpg",
-      link: "https://www.sterlingsales.co/",
-    },
   ];
 
   const scrollToProjects = () => {
@@ -73,34 +89,6 @@ const Clients = () => {
       <h2 className="text-4xl font-bold text-highlight mb-8 text-center">
         Clients
       </h2>
-      {/* Horizontal Bar Section */}
-      <div className="bg-dark/50 rounded-lg py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-highlight pb-2">
-              Active Clients
-            </h2>
-            <Link
-              href="https://projectstatustracker-26044.chipp.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-highlight text-white font-semibold text-lg px-4 py-2 rounded-lg shadow hover:bg-highlight-dark transition"
-            >
-              Track your Project
-            </Link>
-          </div>
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-highlight">
-              Contact Us
-            </h2>
-            <p className="text-white text-lg lg:text-xl">
-              <a href="mailto:emberwavedevelopment@gmail.com">
-                emberwavedevelopment@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Testimonials Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-10">
