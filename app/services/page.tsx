@@ -105,7 +105,7 @@ const Services = () => {
       logo: "/images/ai-logos/Microsoft-Copilot-Logo.png",
     },
     {
-      name: "Clawdbot/Moltbot",
+      name: "OpenClaw/Moltbot",
       description: "Full AI assistant",
       logo: "/images/ai-logos/clawdbot-logo.png",
     },

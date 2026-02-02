@@ -41,7 +41,7 @@ export default function AboutPage() {
     { name: "HeyGen", logo: "/images/ai-logos/heygen.jpeg" },
     { name: "Sintra.AI", logo: "/images/ai-logos/sintra.ai.svg" },
     { name: "GoHighLevel", logo: "/images/ai-logos/highlevel.webp" },
-    { name: "Clawdbot/Moltbot", logo: "/images/ai-logos/clawdbot-logo.png" },
+    { name: "OpenClaw/Moltbot", logo: "/images/ai-logos/clawdbot-logo.png" },
   ];
 
   return (
